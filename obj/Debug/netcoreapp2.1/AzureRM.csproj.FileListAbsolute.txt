@@ -1,0 +1,11 @@
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\bin\Debug\netcoreapp2.1\AzureRM.deps.json
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\bin\Debug\netcoreapp2.1\AzureRM.runtimeconfig.json
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\bin\Debug\netcoreapp2.1\AzureRM.runtimeconfig.dev.json
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\bin\Debug\netcoreapp2.1\AzureRM.dll
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\bin\Debug\netcoreapp2.1\AzureRM.pdb
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\obj\Debug\netcoreapp2.1\AzureRM.csprojAssemblyReference.cache
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\obj\Debug\netcoreapp2.1\AzureRM.csproj.CoreCompileInputs.cache
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\obj\Debug\netcoreapp2.1\AzureRM.AssemblyInfoInputs.cache
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\obj\Debug\netcoreapp2.1\AzureRM.AssemblyInfo.cs
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\obj\Debug\netcoreapp2.1\AzureRM.dll
+C:\Users\Jerry\source\repos\AzureRM\AzureRM\obj\Debug\netcoreapp2.1\AzureRM.pdb
