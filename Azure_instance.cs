@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Microsoft.Azure.Management.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Authentication;
@@ -30,17 +31,29 @@ namespace AzureRM
         /// <summary>
         /// Delete Resource Groups using the pattern
         /// </summary>
-        /// <param name="pattern">For example, exact search "test"; start with "test*"; end with "*test"; contain "*test*"</param>
-        public void DeleteResourceGroups(string pattern)
+        /// <param name="pattern">Use "*" to do the broad search</param>
+        /// <returns>The set of deleted Resource Groups</returns>
+        public async Task<IEnumerable<string>> DeleteResourceGroups(string pattern)
         {
             var names = GetResourceGroupNames();
 
             if (string.IsNullOrEmpty(pattern) || names.Count() == 0)
-                return;
+                return names.Where(n => 0 == 1);
+
             if (pattern.First() == '*' && pattern.Last() == '*')
                 names = names.Where(n => n.Contains(pattern.Substring(1, pattern.Length - 2)));
             else if (pattern.Last() == '*')
                 names = names.Where(n => n.StartsWith(pattern.Substring(0, pattern.Length - 1)));
+            else if (pattern.First() == '*')
+                names = names.Where(n => n.EndsWith(pattern.Substring(1, pattern.Length - 1)));
+            else
+                names = names.Where(n => n == pattern);
+
+            List<Task> tasks = new List<Task>();
+            foreach (var name in names)
+                tasks.Add(azure.ResourceGroups.DeleteByNameAsync(name));
+            await Task.WhenAll(tasks);
+            return names;
         }
     }
 }
