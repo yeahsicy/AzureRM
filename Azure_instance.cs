@@ -35,6 +35,12 @@ namespace AzureRM
         {
             var names = GetResourceGroupNames();
 
+            if (string.IsNullOrEmpty(pattern) || names.Count() == 0)
+                return;
+            if (pattern.First() == '*' && pattern.Last() == '*')
+                names = names.Where(n => n.Contains(pattern.Substring(1, pattern.Length - 2)));
+            else if (pattern.Last() == '*')
+                names = names.Where(n => n.StartsWith(pattern.Substring(0, pattern.Length - 1)));
         }
     }
 }
