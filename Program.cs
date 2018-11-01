@@ -9,7 +9,7 @@ namespace AzureRM
     {
         static void Main(string[] args)
         {
-            Azure_instance azure_Instance = new Azure_instance("", "", "", "", AzureEnvironment.AzureGlobalCloud);
+            Azure_instance instance = new Azure_instance("", "", "", "", AzureEnvironment.AzureGlobalCloud);
 
         }
     }
