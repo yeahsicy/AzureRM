@@ -9,7 +9,13 @@ namespace AzureRM
     {
         static void Main(string[] args)
         {
-            Azure_instance instance = new Azure_instance("", "", "", "", AzureEnvironment.AzureGlobalCloud);
+            string subscriptionId = "";
+            string clientId = "";
+            string clientSecret = "";
+            string tenantId = "";
+            AzureEnvironment environment = AzureEnvironment.AzureGlobalCloud;
+
+            Azure_instance instance = new Azure_instance(subscriptionId, clientId, clientSecret, tenantId, environment);
 
         }
     }

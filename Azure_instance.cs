@@ -46,13 +46,13 @@ namespace AzureRM
                 return;
 
             if (pattern.First() == '*' && pattern.Last() == '*')
-                input = input.Where(n => n.Contains(pattern.Substring(1, pattern.Length - 2)));
+                input = input.Where(n => n.ToLower().Contains(pattern.Substring(1, pattern.Length - 2).ToLower()));
             else if (pattern.Last() == '*')
-                input = input.Where(n => n.StartsWith(pattern.Substring(0, pattern.Length - 1)));
+                input = input.Where(n => n.ToLower().StartsWith(pattern.Substring(0, pattern.Length - 1).ToLower()));
             else if (pattern.First() == '*')
-                input = input.Where(n => n.EndsWith(pattern.Substring(1, pattern.Length - 1)));
+                input = input.Where(n => n.ToLower().EndsWith(pattern.Substring(1, pattern.Length - 1).ToLower()));
             else
-                input = input.Where(n => n == pattern);
+                input = input.Where(n => n.ToLower() == pattern.ToLower());
         }
 
         /// <summary>
