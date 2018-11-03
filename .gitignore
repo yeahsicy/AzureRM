@@ -1,7 +1,7 @@
 
-.vs/AzureRM/v15/Server/sqlite3/storage.ide-wal
-.vs/AzureRM/v15/Server/sqlite3/storage.ide-shm
-.vs/AzureRM/v15/Server/sqlite3/storage.ide
-.vs/AzureRM/v15/Server/sqlite3/db.lock
-.vs/AzureRM/v15/.suo
 .vs/AzureRM/DesignTimeBuild/.dtbcache
+.vs/AzureRM/v15/.suo
+.vs/AzureRM/v15/Server/sqlite3/db.lock
+.vs/AzureRM/v15/Server/sqlite3/storage.ide
+.vs/AzureRM/v15/Server/sqlite3/storage.ide-shm
+.vs/AzureRM/v15/Server/sqlite3/storage.ide-wal

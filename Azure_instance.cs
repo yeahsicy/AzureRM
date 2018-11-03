@@ -22,6 +22,20 @@ namespace AzureRM
             azure = Azure.Authenticate(c).WithSubscription(subscriptionId);
         }
 
+        public bool IsAzureInstanceValid()
+        {
+            try
+            {
+                azure.GetCurrentSubscription();
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public IEnumerable<string> GetResourceGroupNames()
         {
             var ResourceGroups = azure.ResourceGroups.List();
