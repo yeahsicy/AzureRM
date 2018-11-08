@@ -84,5 +84,12 @@ namespace AzureRM
             await Task.WhenAll(tasks);
             return names;
         }
+
+        public IEnumerable<string> ShowUsers(DateTime start, DateTime end, string ResourceGroupName)
+        {
+            var ActivityLogs = azure.ActivityLogs.DefineQuery().StartingFrom(start).EndsBefore(end).WithAllPropertiesInResponse().FilterByResourceGroup(ResourceGroupName).Execute();
+            var Callers = ActivityLogs.Select(t => t.Caller).Distinct();
+            return Callers;
+        }
     }
 }
