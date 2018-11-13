@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Management.Fluent;
+using Microsoft.Azure.Management.Monitor.Fluent.Models;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Authentication;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
@@ -85,13 +86,9 @@ namespace AzureRM
             return names;
         }
 
-        public dynamic GetFirstUserAndTimestamp(DateTime start, DateTime end, string ResourceGroupName)
+        public IEnumerable<IEventData> GetActivityLogs(DateTime start, DateTime end, string ResourceGroupName)
         {
-            //need to rebuild data structure and test
-            var ActivityLogs = azure.ActivityLogs.DefineQuery().StartingFrom(start).EndsBefore(end).WithAllPropertiesInResponse().FilterByResourceGroup(ResourceGroupName).Execute();
-            if (ActivityLogs == null || ActivityLogs.Count() == 0)
-                return null;
-            return ActivityLogs.Select(a => new { a.Caller, a.EventTimestamp }).OrderBy(t => t.EventTimestamp).First();
+            return azure.ActivityLogs.DefineQuery().StartingFrom(start).EndsBefore(end).WithAllPropertiesInResponse().FilterByResourceGroup(ResourceGroupName).Execute();
         }
     }
 }

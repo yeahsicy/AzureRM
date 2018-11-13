@@ -5,3 +5,15 @@
 .vs/AzureRM/v15/Server/sqlite3/storage.ide
 .vs/AzureRM/v15/Server/sqlite3/storage.ide-shm
 .vs/AzureRM/v15/Server/sqlite3/storage.ide-wal
+obj/project.assets.json
+obj/Debug/netcoreapp2.1/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+obj/Debug/netcoreapp2.1/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+obj/Debug/netcoreapp2.1/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+obj/Debug/netcoreapp2.1/AzureRM.csprojAssemblyReference.cache
+obj/Debug/netcoreapp2.1/AzureRM.csproj.CoreCompileInputs.cache
+obj/Debug/netcoreapp2.1/AzureRM.assets.cache
+obj/Debug/netcoreapp2.1/AzureRM.AssemblyInfoInputs.cache
+obj/Debug/netcoreapp2.1/AzureRM.AssemblyInfo.cs
+obj/AzureRM.csproj.nuget.g.targets
+obj/AzureRM.csproj.nuget.g.props
+obj/AzureRM.csproj.nuget.cache
