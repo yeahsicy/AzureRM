@@ -16,9 +16,6 @@ namespace AzureRM
             AzureEnvironment environment = AzureEnvironment.AzureGlobalCloud;
 
             Azure_instance instance = new Azure_instance(subscriptionId, clientId, clientSecret, tenantId, environment);
-            var temp = instance.IsAzureInstanceValid();
-            var ut = instance.GetFirstUserAndTimestamp(DateTime.Now, DateTime.Now, "rg");
-            var a = ut.Caller;
         }
     }
 }

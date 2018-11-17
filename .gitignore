@@ -17,3 +17,11 @@ obj/Debug/netcoreapp2.1/AzureRM.AssemblyInfo.cs
 obj/AzureRM.csproj.nuget.g.targets
 obj/AzureRM.csproj.nuget.g.props
 obj/AzureRM.csproj.nuget.cache
+bin/Debug/netcoreapp2.1/AzureRM.deps.json
+bin/Debug/netcoreapp2.1/AzureRM.dll
+bin/Debug/netcoreapp2.1/AzureRM.pdb
+bin/Debug/netcoreapp2.1/AzureRM.runtimeconfig.dev.json
+bin/Debug/netcoreapp2.1/AzureRM.runtimeconfig.json
+obj/Debug/netcoreapp2.1/AzureRM.csproj.FileListAbsolute.txt
+obj/Debug/netcoreapp2.1/AzureRM.dll
+obj/Debug/netcoreapp2.1/AzureRM.pdb

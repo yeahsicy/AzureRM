@@ -16,25 +16,20 @@ namespace AzureRM
     class Azure_instance
     {
         IAzure azure;
-
+        
         public Azure_instance(string subscriptionId, string clientId, string clientSecret, string tenantId, AzureEnvironment environment)
         {
             var c = SdkContext.AzureCredentialsFactory.FromServicePrincipal(clientId, clientSecret, tenantId, environment);
             azure = Azure.Authenticate(c).WithSubscription(subscriptionId);
-        }
 
-        public bool IsAzureInstanceValid()
-        {
             try
             {
                 azure.GetCurrentSubscription();
             }
             catch
             {
-                return false;
+                throw;
             }
-
-            return true;
         }
 
         public IEnumerable<string> GetResourceGroupNames()
